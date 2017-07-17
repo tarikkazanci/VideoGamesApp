@@ -1,0 +1,24 @@
+[
+ {
+   "name": "NBA2K17",
+   "img_url": "https://i5.walmartimages.com/asr/3cb9269e-8b51-4dd3-b22c-d9999d3ac8de_1.98ce0f73f3f6851fc2f0b7234d18f9e4.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+   "genre": "Sports",
+   "platforms": ["PS4", "XBOX", "PC"],
+   "description": "Basketball Game",
+
+   "comments": {
+     "body": ["The best basketball game ever."]
+   }
+ },
+ {
+   "name": "FIFA 17",
+   "img_url": "https://static.gamespot.com/uploads/scale_tiny/1197/11970954/3134845-71k4m38z8ql._ac_sl1000_.jpg",
+   "genre": "Sports",
+   "platforms": ["PS4", "XBOX", "PC"],
+   "description": "Soccer Game",
+
+   "comments": {
+     "body": ["The best soccer game ever."]
+   }
+ }
+]
