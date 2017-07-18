@@ -3,7 +3,7 @@ const app = express()
 let mongoose = require("./db/connection.js")
 const bodyParser = require("body-parser")
 
-// Models
+// Models from "db" folder
 let Comment = mongoose.model("Comment")
 let VideoGame = mongoose.model("VideoGame")
 let Favorite = mongoose.model("Favorite")
@@ -43,6 +43,6 @@ app.put("/api/games/:id",function(req,res){
 })
 
 
-app.listen(3000, () => {
-  console.log("app listening on port 3000")
+app.listen(4000, () => {
+  console.log("app listening on port 4000")
 })

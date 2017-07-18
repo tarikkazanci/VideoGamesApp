@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import {
+//   BrowserRouter as Router,
+//   // Route
+//   // Link,
+//   // Redirect
+// } from "react-router-dom"
+
 import './App.css';
+import axios from "axios"
+
+import GameIndex from './components/GameIndex.js'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      games: []
+    }
+  }
+
+  componentDidMount(){
+      axios.get("http://localhost:4000/api/games").then((response) => {
+        this.setState({
+          games: response.data
+        })
+      })
+    }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <nav>
+
+        </nav>
+
+        <main>
+            <GameIndex games={this.state.games}/>
+        </main>
       </div>
     );
   }
