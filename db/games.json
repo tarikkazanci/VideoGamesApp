@@ -4,21 +4,22 @@
    "img_url": "https://lh3.googleusercontent.com/lE59wg2LfMx70B7MD3gWOASXIN9TNTpjuSMA1BaVbPdi40_3fKH2HFKUuz8q8Ya-YvTz=w300",
    "genre": "Sports",
    "platforms": ["PS4", "XBOX", "PC"],
-   "description": "Basketball Game",
-
+   "description": "NBA 2K franchise continues to stake its claim as the most authentic sports video game with NBA 2K17",
+   "video_url": "https://www.youtube.com/embed/cQKDcMxTAfw",
    "comments": {
-     "body": ["The best basketball game ever."]
+     "body":["The best basketball game ever", "Awesome game", "MyPlayer mode is super cool"]
    }
  },
+
  {
    "name": "FIFA 17",
    "img_url": "https://static.gamespot.com/uploads/scale_tiny/1197/11970954/3134845-71k4m38z8ql._ac_sl1000_.jpg",
    "genre": "Sports",
    "platforms": ["PS4", "XBOX", "PC"],
-   "description": "Soccer Game",
-
+   "description": "For the first time ever in FIFA, live your story on and off the pitch as the Premier League’s next rising star, Alex Hunter. Play on any club in the Premier league, for authentic managers and alongside some of the best players on the planet. Experience brand new worlds in FIFA 17, all while navigating your way through the emotional highs and lows of The Journey.",
+   "video_url": "https://www.youtube.com/embed/-3fjoe5Njpc",
    "comments": {
-     "body": ["The best soccer game ever."]
+     "body": ["I think FIFA17 is the best soccer game in the history", "'The Journey' mode is awesome"]
    }
  }
 ]
