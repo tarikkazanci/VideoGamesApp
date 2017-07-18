@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-// import {
-//   BrowserRouter as Router,
-//   // Route
-//   // Link,
-//   // Redirect
-// } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  // Redirect
+} from "react-router-dom"
 
-import './App.css';
 import axios from "axios"
-
+import './App.css';
 import GameIndex from './components/GameIndex.js'
+import GameShow from './components/GameShow.js'
+
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class App extends Component {
 
   componentDidMount(){
       axios.get("http://localhost:4000/api/games").then((response) => {
+        console.log(response.data)
         this.setState({
           games: response.data
         })
@@ -29,15 +31,25 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <nav>
+      <Router>
+        <div>
+          <nav>
+              <Link to="/home">Home</Link>
+              <Link to="/home">About</Link>
+          </nav>
 
-        </nav>
+          <main>
+            <Route path='/home' render={() => {
+                return (
+                <GameIndex games={this.state.games} />
+              )
+              } }
+            />
 
-        <main>
-            <GameIndex games={this.state.games}/>
-        </main>
-      </div>
+            <Route path="/games/:name" component={GameShow}/>
+          </main>
+        </div>
+      </Router>
     );
   }
 }
