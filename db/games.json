@@ -21,5 +21,30 @@
    "comments": {
      "body": ["I think FIFA17 is the best soccer game in the history", "'The Journey' mode is awesome"]
    }
+ },
+
+ {
+   "name": "Grand Theft Auto V",
+   "img_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a5/Grand_Theft_Auto_V.png/250px-Grand_Theft_Auto_V.png",
+   "genre": "Adventure",
+   "platforms": ["PS4", "XBOX", "PC"],
+   "description": "The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game’s three lead characters, playing all sides of the game’s interwoven story.",
+   "video_url": "https://www.youtube.com/embed/QkkoHAzjnUs",
+   "comments": {
+     "body": ["All the GTA series are super cool but GTA V is the best!", "My favorite thing in the game is stealing awesome cars"]
+   }
+ },
+
+ {
+   "name": "Star Wars: Battlefront",
+   "img_url": "http://static.tvtropes.org/pmwiki/pub/images/star_wars_battlefront_2015_box.jpg",
+   "genre": "Shooter",
+   "platforms": ["PS4", "XBOX", "PC"],
+   "description": "Star Wars Battlefront is an action shooter video game developed by EA DICE, with additional work from Criterion Games, and published by Electronic Arts.",
+   "video_url": "https://www.youtube.com/embed/ZwWLns7-xN8",
+   "comments": {
+     "body": ["Star Wars Battlefront rocks!!!"]
+   }
  }
+
 ]

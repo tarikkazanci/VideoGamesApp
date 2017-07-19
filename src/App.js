@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  // Redirect
+  Redirect
 } from "react-router-dom"
 
 import axios from "axios"
@@ -13,34 +13,51 @@ import GameShow from './components/GameShow.js'
 import About from './components/About.js'
 
 
-
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       games: [] ,
-      query: ""
+      name: '',
+      img_url: '',
+      genre: '',
+      platforms: '',
+      video_url: '',
+      description: '',
     }
-    this.addGame = this.addGame.bind(this)
+    // Binds methods to the state
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   // Making API call to get data from back end via "axios"
-  componentDidMount(){
-      axios.get("http://localhost:4000/api/games").then((response) => {
-        console.log(response.data)
-        this.setState({
-          games: response.data
+     componentDidMount(){
+        axios.get("http://localhost:4000/api/games").then((response) => {
+          console.log(response.data)
+          this.setState({
+            games: response.data
+          })
         })
-      })
-    }
+      }
 
-  addGame(e) {
-    e.preventDefault()
-    this.setState({
-      query: e.target.value
-    })
-    this.state.games.push(this.state.query)
-  }
+  // Handles input change
+      handleChange(e){
+        this.setState({
+          [e.target.name]: e.target.value
+        })
+      }
+
+  // Handles form submission
+       handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, img_url, genre, platforms, video_url, description } = this.state;
+
+  // Post request to the server
+       axios.post('http://localhost:4000/api/games', { name: name, img_url: img_url, genre: genre, platforms: platforms, video_url: video_url, description: description })
+         .then((result) => {
+           console.log(result);
+          });
+      }
 
   render() {
     return (
@@ -49,19 +66,27 @@ class App extends Component {
           <nav className="navbar">
               <Link to="/home" className="main-header">T-GAMEZ</Link>
               <Link to="/home">Home</Link>
-              <Link to="/home">Games</Link>
+              <Link to="/games">Games</Link>
               <Link to="/about">About</Link>
           </nav>
 
           <main>
-            <Route path='/home' render={() => {
+
+            <h1>T-GAMEZ</h1>
+            <Route exact path='/games' render={() => {
                 return (
-                <GameIndex addGame={this.addGame} games={this.state.games} />
+                <GameIndex handleChange={this.handleChange} handleSubmit={this.handleSubmit} games={this.state.games} />
               )
               } }
             />
-            <Route path="/about" component={About}/>
-            <Route path="/games/:name" component={GameShow}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/games/:name" component={GameShow}/>
+            <Route
+              path="/*"
+              render={() => {
+                return <Redirect to="/home" />
+              }}
+            />
           </main>
         </div>
       </Router>

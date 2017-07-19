@@ -10,7 +10,6 @@ class GameShow extends Component {
   }
 
   render() {
-
     let gameComments = this.state.game.comments.map((comment, i) =>{
       return (
         <div key={i}>
@@ -32,6 +31,13 @@ class GameShow extends Component {
           <iframe width="560" height="315" title="Game Video" src={this.state.game.video_url}></iframe>
            <h3>Reviews</h3>
           <p> {gameComments} </p>
+
+          <h3>Write a Review</h3>
+            <form>
+              <input type="text" name="name" placeholder="Add a review..."/>
+              <button type="submit">Submit</button>
+            </form>
+
       </div>
     )
   }
