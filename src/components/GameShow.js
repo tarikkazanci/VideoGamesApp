@@ -29,7 +29,7 @@ class GameShow extends Component {
           <p>Platforms: {this.state.game.platforms.join(',')} </p>
           <p> {this.state.game.description} </p>
           <iframe width="560" height="315" title="Game Video" src={this.state.game.video_url}></iframe>
-           <h3>Reviews</h3>
+           <h2>Reviews</h2>
           <p> {gameComments} </p>
 
           <h3>Write a Review</h3>

@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Redirect
+  // Redirect
 } from "react-router-dom"
 
 import axios from "axios"
@@ -71,8 +71,6 @@ class App extends Component {
           </nav>
 
           <main>
-
-            <h1>T-GAMEZ</h1>
             <Route exact path='/games' render={() => {
                 return (
                 <GameIndex handleChange={this.handleChange} handleSubmit={this.handleSubmit} games={this.state.games} />
@@ -81,12 +79,12 @@ class App extends Component {
             />
             <Route exact path="/about" component={About}/>
             <Route exact path="/games/:name" component={GameShow}/>
-            <Route
+            {/* <Route
               path="/*"
               render={() => {
                 return <Redirect to="/home" />
               }}
-            />
+            /> */}
           </main>
         </div>
       </Router>
