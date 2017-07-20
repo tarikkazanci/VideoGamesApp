@@ -5,7 +5,7 @@ import '../css/GameForm.css';
 class GameForm extends Component {
 render() {
   return(
-    <div>
+    <div className="gameForm-container">
         <h2> Add a Game </h2>
         <form onSubmit={this.props.handleSubmit}>
             <input type="text" name="name"     onChange={this.props.handleChange}   placeholder="Name"/>

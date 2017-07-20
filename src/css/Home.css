@@ -2,7 +2,7 @@
 .home-container  {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/0b/44/7c/0b447c2fb9c964785f97fb41cf76b619.jpg");
   background-size: cover;
-  max-width: 100%;
+  width: 100%;
   height: 898px;
   /*margin-top: -28px;*/
   background-repeat: no-repeat;
@@ -12,11 +12,22 @@
 }
 
 .home-header {
-  margin-top: 0px;
-  padding: 30px;
+  margin-top: -26px;
+  padding: 40px;
   font-size: 56px;
   color: white;
 }
 .home-header:hover {
+  color: indianred;
+}
+
+.home-container a {
+  color: white;
+  font-size: 30px;
+  margin-top: -77px;
+  text-decoration: none;
+}
+
+.home-container a:hover {
   color: indianred;
 }

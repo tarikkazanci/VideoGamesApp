@@ -1,0 +1,28 @@
+.gameShow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-header {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: -18px;
+  color: indianred;
+}
+.gameShow-container p {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 12px;
+}
+.gameShow-container img {
+  margin-top: 50px;
+}
+
+.review-header {
+  margin-bottom: 5px;
+}
+
+.gameShow-container li {
+  font-size: 19px;
+}

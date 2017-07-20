@@ -1,12 +1,18 @@
-input {
-  width: 13%;
-  height: 24px;
+.gameForm-container input {
+  width: 15%;
+  height: 25px;
   font-size: 13px;
-  margin: 4px;
+  margin: 5px;
 }
 
-button {
+.gameForm-container button {
   width: 4%;
   height: 30px;
   cursor: pointer;
+}
+
+.gameForm-container h2 {
+  font-size: 25px;
+  width: 10%;
+  margin: 21px auto;
 }

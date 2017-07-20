@@ -6,9 +6,8 @@
    "platforms": ["PS4", "XBOX", "PC"],
    "description": "NBA 2K franchise continues to stake its claim as the most authentic sports video game with NBA 2K17",
    "video_url": "https://www.youtube.com/embed/cQKDcMxTAfw",
-   "comments": {
-     "body":["The best basketball game ever", "Awesome game", "MyPlayer mode is super cool"]
-   }
+   "comments":["The best basketball game ever", "Awesome game", "MyPlayer mode is super cool"]
+
  },
 
  {
@@ -18,9 +17,7 @@
    "platforms": ["PS4", "XBOX", "PC"],
    "description": "For the first time ever in FIFA, live your story on and off the pitch as the Premier League’s next rising star, Alex Hunter. Play on any club in the Premier league, for authentic managers and alongside some of the best players on the planet. Experience brand new worlds in FIFA 17, all while navigating your way through the emotional highs and lows of The Journey.",
    "video_url": "https://www.youtube.com/embed/-3fjoe5Njpc",
-   "comments": {
-     "body": ["I think FIFA17 is the best soccer game in the history", "'The Journey' mode is awesome"]
-   }
+   "comments": ["I think FIFA17 is the best soccer game in the history", "'The Journey' mode is awesome"]
  },
 
  {
@@ -30,9 +27,7 @@
    "platforms": ["PS4", "XBOX", "PC"],
    "description": "The biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game’s three lead characters, playing all sides of the game’s interwoven story.",
    "video_url": "https://www.youtube.com/embed/QkkoHAzjnUs",
-   "comments": {
-     "body": ["All the GTA series are super cool but GTA V is the best!", "My favorite thing in the game is stealing awesome cars"]
-   }
+   "comments": ["All the GTA series are super cool but GTA V is the best!", "My favorite thing in the game is stealing awesome cars"]
  },
 
  {
@@ -42,9 +37,7 @@
    "platforms": ["PS4", "XBOX", "PC"],
    "description": "Star Wars Battlefront is an action shooter video game developed by EA DICE, with additional work from Criterion Games, and published by Electronic Arts.",
    "video_url": "https://www.youtube.com/embed/ZwWLns7-xN8",
-   "comments": {
-     "body": ["Star Wars Battlefront rocks!!!"]
-   }
+   "comments": ["Star Wars Battlefront rocks!!!", "Go Darth Vader!"]
  }
 
 ]

@@ -19,10 +19,12 @@ render() {
 
 return(
   // CREATE FORM
-  <div className="gameIndex-container">
-      <h1 className="gameIndex-header">Super Awesome Video Games</h1>
-        {videoGames}
-  </div>
+  <div>
+    <h1 className="gameIndex-header">Super Awesome Video Games</h1>
+    <div className="gameIndex-container">
+          {videoGames}
+    </div>
+ </div>
   )
   }
 }

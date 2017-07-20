@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// Imported components
 import Home from './components/Home.js'
 import GameIndex from './components/GameIndex.js'
 import GameShow from './components/GameShow.js'
@@ -6,15 +7,13 @@ import About from './components/About.js'
 import GameForm from './components/GameForm.js'
 import './css/Layout.css';
 
-
+import axios from "axios"
 import {
   BrowserRouter as Router,
   Route,
   Link,
-  // Redirect
+  Redirect
 } from "react-router-dom"
-
-import axios from "axios"
 
 
 class App extends Component {
@@ -28,6 +27,8 @@ class App extends Component {
       platforms: '',
       video_url: '',
       description: '',
+      // hasSubmitted: false,
+      // body: '',
     }
     // Binds methods to the state
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -61,6 +62,7 @@ class App extends Component {
          platforms: platforms, video_url: video_url, description: description })
          .then((result) => {
            console.log(result);
+          //  hasSubmitted: true
           });
       }
 
@@ -78,6 +80,7 @@ class App extends Component {
           <main>
             <Route exact path='/games' render={() => {
               return (
+                // <Redirect to="/games/:name" />
                 <GameForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
               )
             } }

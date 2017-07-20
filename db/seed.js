@@ -2,16 +2,16 @@ let mongoose = require("./connection.js")
 let gameData = require("./games.json")
 
 
-let Comment = mongoose.model("Comment")
+// let Comment = mongoose.model("Comment")
 let VideoGame = mongoose.model("VideoGame")
 let Favorite = mongoose.model("Favorite")
 
-Comment.remove({}).then(()=>{
-	Comment.collection.insert().then(()=>{
-		console.log("seeds function fired")
-		process.exit();
-	})
-})
+// Comment.remove({}).then(()=>{
+// 	Comment.collection.insert().then(()=>{
+// 		console.log("seeds function fired")
+// 		process.exit();
+// 	})
+// })
 
 VideoGame.remove({}).then(()=>{
 	VideoGame.collection.insert(gameData).then(()=>{

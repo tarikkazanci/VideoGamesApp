@@ -1,12 +1,12 @@
 const express = require("express")
 const app = express()
 const cors = require('cors')
-app.use(cors()) 
+app.use(cors())
 let mongoose = require("./db/connection.js")
 const bodyParser = require("body-parser")
 
 // Models from "db" folder
-let Comment = mongoose.model("Comment")
+// let Comment = mongoose.model("Comment")
 let VideoGame = mongoose.model("VideoGame")
 let Favorite = mongoose.model("Favorite")
 
