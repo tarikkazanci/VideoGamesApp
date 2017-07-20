@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import Home from './components/Home.js'
+import GameIndex from './components/GameIndex.js'
+import GameShow from './components/GameShow.js'
+import About from './components/About.js'
+import GameForm from './components/GameForm.js'
+
 import {
   BrowserRouter as Router,
   Route,
@@ -7,10 +13,6 @@ import {
 } from "react-router-dom"
 
 import axios from "axios"
-import './App.css';
-import GameIndex from './components/GameIndex.js'
-import GameShow from './components/GameShow.js'
-import About from './components/About.js'
 
 
 class App extends Component {
@@ -53,7 +55,8 @@ class App extends Component {
         const { name, img_url, genre, platforms, video_url, description } = this.state;
 
   // Post request to the server
-       axios.post('http://localhost:4000/api/games', { name: name, img_url: img_url, genre: genre, platforms: platforms, video_url: video_url, description: description })
+       axios.post('http://localhost:4000/api/games', { name: name, img_url: img_url, genre: genre,
+         platforms: platforms, video_url: video_url, description: description })
          .then((result) => {
            console.log(result);
           });
@@ -72,13 +75,20 @@ class App extends Component {
 
           <main>
             <Route exact path='/games' render={() => {
+              return (
+                <GameForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
+              )
+            } }
+          />
+            <Route exact path='/games' render={() => {
                 return (
                 <GameIndex handleChange={this.handleChange} handleSubmit={this.handleSubmit} games={this.state.games} />
               )
               } }
             />
-            <Route exact path="/about" component={About}/>
             <Route exact path="/games/:name" component={GameShow}/>
+            <Route exact path="/home" component={Home}/>
+            <Route exact path="/about" component={About}/>
             {/* <Route
               path="/*"
               render={() => {
