@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
+import '../css/GameIndex.css';
+
 
 
 class GameIndex extends Component {
@@ -17,8 +19,8 @@ render() {
 
 return(
   // CREATE FORM
-  <div>
-      <h1>Super Awesome Video Games</h1>
+  <div className="gameIndex-container">
+      <h1 className="gameIndex-header">Super Awesome Video Games</h1>
         {videoGames}
   </div>
   )

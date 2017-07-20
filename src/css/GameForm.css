@@ -1,0 +1,12 @@
+input {
+  width: 13%;
+  height: 24px;
+  font-size: 13px;
+  margin: 4px;
+}
+
+button {
+  width: 4%;
+  height: 30px;
+  cursor: pointer;
+}

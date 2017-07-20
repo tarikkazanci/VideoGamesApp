@@ -4,6 +4,8 @@ import GameIndex from './components/GameIndex.js'
 import GameShow from './components/GameShow.js'
 import About from './components/About.js'
 import GameForm from './components/GameForm.js'
+import './css/Layout.css';
+
 
 import {
   BrowserRouter as Router,

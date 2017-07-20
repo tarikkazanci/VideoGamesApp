@@ -1,0 +1,25 @@
+.gameIndex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gameIndex-header{
+  font-size: 37px;
+}
+
+.gameIndex-container img {
+  width: 90%;
+  height: 315px;
+}
+
+.gameIndex-container a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.gameIndex-container a:hover {
+  color: indianred;
+}
