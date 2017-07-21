@@ -89,6 +89,7 @@ class App extends Component {
 
           <main>
             <Route exact path='/games' render={() => {
+              // let newGame = this.state.newGame ? this.state.newGame : null
               let newGame = this.state.newGame
               return this.state.hasSubmitted
                 ? <Redirect to={{pathname: `/games/${this.state.newGame.name}`, state: {selectedGame: newGame}}} />
@@ -98,18 +99,24 @@ class App extends Component {
 
             <Route exact path='/games' render={() => {
                 return (
-                <GameIndex handleChange={this.handleChange} handleSubmit={this.handleSubmit} games={this.state.games} />
+                <GameIndex
+                  handleChange={this.handleChange}
+                  handleSubmit={this.handleSubmit}
+                  games={this.state.games}
+                  clearSubmit={this.clearSubmit}
+                />
               )
               } }
             />
-            <Route exact path="/games/:name" component={GameShow}/>
-            {/* <Route
-              path="/games/:name" render={() => {
+            {/* <Route exact path="/games/:name" component={GameShow}/> */}
+            <Route path="/games/:name" render={({location}) => {
                 return (
-                  <GameShow clearSubmit={this.clearSubmit} />
+                  <GameShow
+                    clearSubmit={this.clearSubmit}
+                    location={location}/>
                 )
               }}
-            /> */}
+            />
             <Route exact path="/home" component={Home}/>
             <Route exact path="/about" component={About}/>
           </main>

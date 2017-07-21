@@ -4,14 +4,17 @@ import '../css/GameShow.css';
 
 
 class GameShow extends Component {
-  // componentDidMount() {
-  //   this.props.clearSubmit()
-  // }
+
   constructor(props) {
     super(props)
+    console.log(props);
     this.state = {
       game: this.props.location.state.selectedGame
     }
+  }
+  
+  componentDidMount() {
+    this.props.clearSubmit()
   }
 
   render() {
