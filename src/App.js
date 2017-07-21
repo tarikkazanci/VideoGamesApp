@@ -27,12 +27,13 @@ class App extends Component {
       platforms: '',
       video_url: '',
       description: '',
-      // hasSubmitted: false,
-      // body: '',
+      hasSubmitted: false,
+      newGame: {}
     }
     // Binds methods to the state
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.clearSubmit = this.clearSubmit.bind(this)
   }
 
   // Making API call to get data from back end via "axios"
@@ -55,15 +56,24 @@ class App extends Component {
   // Handles form submission
        handleSubmit = (e) => {
         e.preventDefault();
-        const { name, img_url, genre, platforms, video_url, description } = this.state;
+        const { name, img_url, genre, platforms, video_url, description} = this.state;
 
   // Post request to the server
        axios.post('http://localhost:4000/api/games', { name: name, img_url: img_url, genre: genre,
          platforms: platforms, video_url: video_url, description: description })
          .then((result) => {
-           console.log(result);
-          //  hasSubmitted: true
-          });
+           console.log(result.data);
+           this.setState({
+             hasSubmitted: true,
+             newGame: result.data
+           })
+        });
+      }
+
+      clearSubmit() {
+        this.setState({
+          hasSubmitted: false
+        })
       }
 
   render() {
@@ -79,12 +89,13 @@ class App extends Component {
 
           <main>
             <Route exact path='/games' render={() => {
-              return (
-                // <Redirect to="/games/:name" />
-                <GameForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-              )
-            } }
-          />
+              let newGame = this.state.newGame
+              return this.state.hasSubmitted
+                ? <Redirect to={{pathname: `/games/${this.state.newGame.name}`, state: {selectedGame: newGame}}} />
+                : <GameForm handleChange={this.handleChange} handleSubmit={this.handleSubmit} games={this.state.games} />
+              } }
+            />
+
             <Route exact path='/games' render={() => {
                 return (
                 <GameIndex handleChange={this.handleChange} handleSubmit={this.handleSubmit} games={this.state.games} />
@@ -92,14 +103,15 @@ class App extends Component {
               } }
             />
             <Route exact path="/games/:name" component={GameShow}/>
-            <Route exact path="/home" component={Home}/>
-            <Route exact path="/about" component={About}/>
             {/* <Route
-              path="/*"
-              render={() => {
-                return <Redirect to="/home" />
+              path="/games/:name" render={() => {
+                return (
+                  <GameShow clearSubmit={this.clearSubmit} />
+                )
               }}
             /> */}
+            <Route exact path="/home" component={Home}/>
+            <Route exact path="/about" component={About}/>
           </main>
         </div>
       </Router>

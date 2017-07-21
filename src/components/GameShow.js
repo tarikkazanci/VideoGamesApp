@@ -4,6 +4,9 @@ import '../css/GameShow.css';
 
 
 class GameShow extends Component {
+  // componentDidMount() {
+  //   this.props.clearSubmit()
+  // }
   constructor(props) {
     super(props)
     this.state = {
@@ -26,7 +29,7 @@ class GameShow extends Component {
             <img src={this.state.game.img_url} alt="game_pic" />
             <p> {this.state.game.genre} </p>
             <p>Platforms: {this.state.game.platforms.join(',')} </p>
-            <p> {this.state.game.description} </p>
+            <p className="description"> {this.state.game.description} </p>
             <iframe width="560" height="315" title="Game Video" src={this.state.game.video_url}></iframe>
 
         <h2 className="review-header">Reviews</h2>
