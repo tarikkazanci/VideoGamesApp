@@ -38,6 +38,56 @@
    "description": "Star Wars Battlefront is an action shooter video game developed by EA DICE, with additional work from Criterion Games, and published by Electronic Arts.",
    "video_url": "https://www.youtube.com/embed/ZwWLns7-xN8",
    "comments": ["Star Wars Battlefront rocks!!!", "Go Darth Vader!"]
+ },
+
+ {
+   "name": "Uncharted 4: A Thief's End",
+   "img_url": "https://upload.wikimedia.org/wikipedia/en/1/1a/Uncharted_4_box_artwork.jpg",
+   "genre": "Adventure",
+   "platforms": ["PS4"],
+   "description": "Several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he's willing to sacrifice to save the ones he loves.",
+   "video_url": "https://www.youtube.com/embed/y1Rx-Bbht5E",
+   "comments": ["The best thiefs in the world!!"]
+ },
+
+ {
+   "name": "The Last Of Us",
+   "img_url": "https://upload.wikimedia.org/wikipedia/en/4/46/Video_Game_Cover_-_The_Last_of_Us.jpg",
+   "genre": "Adventure",
+   "platforms": ["PS3", "PS4"],
+   "description": "Twenty years after a mutated fungus started turning people all over the world into deadly zombies, humans become an endangered species. Joel, a Texan in his forties with the 'emotional range of a teaspoon' (to quote Hermione from Harry Potter), finds himself responsible with the safety of a fourteen year old girl named Ellie whom he must smuggle to a militia group called the Fireflies. And as if the infected aren't enough of a hassle, they also have to deal with the authorities who wouldn't let them leave the quarantine zone, as well as other survivors capable of killing anyone who might have something useful in their backpacks.",
+   "video_url": "https://www.youtube.com/embed/OQWD5W3fpPM",
+   "comments": []
+ },
+
+ {
+   "name": "Battlefield 1",
+   "img_url": "https://upload.wikimedia.org/wikipedia/en/f/fc/Battlefield_1_cover_art.jpg",
+   "genre": "Shooter",
+   "platforms": ["PS4", "XBOX", "PC"],
+   "description": "Discover classic Battlefield gameplay with epic multiplayer and an adventure-filled campaign. Experience the Dawn of All-Out War, Only in Battlefield 1.",
+   "video_url": "https://www.youtube.com/embed/c7nRTF2SowQ",
+   "comments": []
+ },
+
+ {
+   "name": "Destiny",
+   "img_url": "https://upload.wikimedia.org/wikipedia/en/b/be/Destiny_box_art.png",
+   "genre": "RPG",
+   "platforms": ["PS3", "PS4", "XBOX", "PC"],
+   "description": "Bungie has emphasized that the universe of Destiny will be 'alive'. Events may happen in-game that are not necessarily controlled or planned by the developer, which will help to create a dynamic developing experience for Bungie and a dynamic playing experience for gamers.",
+   "video_url": "https://www.youtube.com/embed/9ZyQK6kUdWQ",
+   "comments": []
+ },
+
+ {
+   "name": "Watch Dogs",
+   "img_url": "https://upload.wikimedia.org/wikipedia/en/d/d9/Watch_Dogs_box_art.jpg",
+   "genre": "Adventure",
+   "platforms": ["WII", "PS3", "PS4", "XBOX", "PC"],
+   "description": "Set in Chicago, where a central network of computers connects everyone and everything, Watch_Dogs explores the impact of technology within our society. Using the city as your weapon, you will embark on a personal mission to inflict your own brand of justice. Chicago's overarching network is known as the Central Operating System (ctOS), and it controls almost all of the city's technology and information - including key data on all of the city's residents.",
+   "video_url": "https://www.youtube.com/embed/DqoQG_XYF-8",
+   "comments": []
  }
 
 ]

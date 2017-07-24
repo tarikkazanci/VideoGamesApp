@@ -1,8 +1,5 @@
 let mongoose = require("mongoose")
 
-// let CommentSchema = new mongoose.Schema ({
-//   body: Array
-// })
 
 let VideoGameSchema = new mongoose.Schema ({
   name: String,

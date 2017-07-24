@@ -1,0 +1,12 @@
+.about-container {
+  text-align: center;
+  height: 700px;
+}
+
+.about-container p {
+    height: 40px;
+    font-size: 24px;
+    background-color: floralwhite;
+    border-radius: 60px;
+    padding: 36px;
+}
