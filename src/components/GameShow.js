@@ -12,7 +12,7 @@ class GameShow extends Component {
       game: this.props.location.state.selectedGame
     }
   }
-  
+
   componentDidMount() {
     this.props.clearSubmit()
   }
@@ -38,11 +38,11 @@ class GameShow extends Component {
         <h2 className="review-header">Reviews</h2>
             <ul>{gameComments}</ul>
 
-        <h3>Write a Review</h3>
+        {/* <h3>Write a Review</h3>
             <form>
               <input type="text" name="name" placeholder="Add a review..."/>
               <button type="submit">Submit</button>
-            </form>
+            </form> */}
       </div>
     )
    }
