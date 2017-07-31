@@ -38,7 +38,7 @@ class App extends Component {
 
   // Making API call to get data from back end via "axios"
      componentDidMount(){
-        axios.get("http://localhost:4000/api/games").then((response) => {
+        axios.get("https://t-gamez.herokuapp.com/games").then((response) => {
           console.log(response.data)
           this.setState({
             games: response.data
