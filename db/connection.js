@@ -1,6 +1,7 @@
 let mongoose = require("mongoose")
 
-
+const database = process.env.MONGODB || "mongodb://localhost/videogamesdb"
+console.log("connecting to",database);
 let VideoGameSchema = new mongoose.Schema ({
   name: String,
   img_url: String,
@@ -19,6 +20,6 @@ let FavoriteSchema = new mongoose.Schema ({
 // mongoose.model("Comment", CommentSchema)
 mongoose.model("VideoGame", VideoGameSchema)
 mongoose.model("Favorite", FavoriteSchema)
-mongoose.connect("mongodb://localhost/videogamesdb")
+mongoose.connect(database)
 
 module.exports = mongoose

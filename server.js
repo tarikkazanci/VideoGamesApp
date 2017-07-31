@@ -5,6 +5,8 @@ app.use(cors())
 let mongoose = require("./db/connection.js")
 const bodyParser = require("body-parser")
 
+const APP_PORT = process.env.PORT || 4000
+
 // Models from "db" folder
 // let Comment = mongoose.model("Comment")
 let VideoGame = mongoose.model("VideoGame")
@@ -45,6 +47,6 @@ app.put("/api/games/:id",function(req,res){
 })
 
 
-app.listen(4000, () => {
-  console.log("app listening on port 4000")
+app.listen(APP_PORT, () => {
+  console.log("app listening on port", APP_PORT)
 })
