@@ -109,7 +109,7 @@ class App extends Component {
               } }
             />
             {/* <Route exact path="/games/:name" component={GameShow}/> */}
-            <Route path="/games/:name" render={({location}) => {
+            <Route strict path="/games/:name" render={({location}) => {
                 return (
                   <GameShow
                     clearSubmit={this.clearSubmit}
